@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>1eAder</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="Hexo博客搭建(Hexo+Github) &amp;emsp;&amp;emsp;之前我的博客采用的是Emlog+Niginx+Php+Mysql方式搭建的，这样效果感觉不是很好，所以想尝试大佬们都在用的Hexo博客。不得不说，这个Hexo博客的模式，我很早之前也这么想过，因为真的很安全，不存在什么漏洞行为了，前后端彻底分离了。 &amp;emsp;&amp;emsp;Hexo博客 是比较方便写作的博客了，不像其他博客程序，可">
+<meta name="keywords" content="CTF,hacker,seo,一个热爱网络技术的少年,网络攻防,内网渗透技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1eAder">
+<meta property="og:url" content="http://yoursite.com/2018/10/11/start-hexo/index.html">
+<meta property="og:site_name" content="1eAder">
+<meta property="og:description" content="Hexo博客搭建(Hexo+Github) &amp;emsp;&amp;emsp;之前我的博客采用的是Emlog+Niginx+Php+Mysql方式搭建的，这样效果感觉不是很好，所以想尝试大佬们都在用的Hexo博客。不得不说，这个Hexo博客的模式，我很早之前也这么想过，因为真的很安全，不存在什么漏洞行为了，前后端彻底分离了。 &amp;emsp;&amp;emsp;Hexo博客 是比较方便写作的博客了，不像其他博客程序，可">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-10-11T15:21:28.420Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1eAder">
+<meta name="twitter:description" content="Hexo博客搭建(Hexo+Github) &amp;emsp;&amp;emsp;之前我的博客采用的是Emlog+Niginx+Php+Mysql方式搭建的，这样效果感觉不是很好，所以想尝试大佬们都在用的Hexo博客。不得不说，这个Hexo博客的模式，我很早之前也这么想过，因为真的很安全，不存在什么漏洞行为了，前后端彻底分离了。 &amp;emsp;&amp;emsp;Hexo博客 是比较方便写作的博客了，不像其他博客程序，可">
+    
+
+    
+        <link rel="alternate" href="/" title="1eAder" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">一个热爱网络技术的少年(已不是少年).</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Inici</a>
+                                </li>
+                            
+                                        
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'categories',
+            TAGS: 'etiquetes',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    Sense categoria
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-start-hexo" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/10/11/start-hexo/" class="article-date">
+            <time datetime="2018-10-11T15:21:30.000Z" itemprop="datePublished">2018-10-11</time>
+        </a>
+    </div>
+
+		
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Hexo博客搭建-Hexo-Github"><a href="#Hexo博客搭建-Hexo-Github" class="headerlink" title="Hexo博客搭建(Hexo+Github)"></a>Hexo博客搭建(Hexo+Github)</h1><hr>
+<p>&emsp;&emsp;之前我的博客采用的是Emlog+Niginx+Php+Mysql方式搭建的，这样效果感觉不是很好，所以想尝试大佬们都在用的Hexo博客。不得不说，这个Hexo博客的模式，我很早之前也这么想过，因为真的很安全，不存在什么漏洞行为了，前后端彻底分离了。</p>
+<p>&emsp;&emsp;<strong>Hexo博客</strong> 是比较方便写作的博客了，不像其他博客程序，可以变换多种，变成CMS或者小说站等等。所以，我觉得以后每天来记录我的学习情况，这样有助于技术上的成长~ </p>
+<p>&emsp;&emsp;废话不多说，搭建前的准备：</p>
+<blockquote>
+<ul>
+<li>本地服务器(win7)——用于本地创作文稿</li>
+<li>Github账号——用于存放你的博客内容</li>
+</ul>
+</blockquote>
+<h2 id="本地服务器准备阶段"><a href="#本地服务器准备阶段" class="headerlink" title="本地服务器准备阶段"></a>本地服务器准备阶段</h2><blockquote>
+<p>因为我本地用的虚拟机(不想占用太多物理机的地方，虽然也占用不了多少。。) 虚拟机可以用linux或者windows，这个看你自己的操作习惯。本地服务器的作用其实就是用来写作，因为最终我们是要PUSH到github上面去的。</p>
+</blockquote>
+<p>1.先下载<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a>,一路Next选择就ok啦~<br>2.创建一个文件夹，用来存放本地博客。我这里取名为blog</p>
+<hr>
+<h2 id="Github准备阶段"><a href="#Github准备阶段" class="headerlink" title="Github准备阶段"></a>Github准备阶段</h2><blockquote>
+<p>Github是全球最大的基友社交平台。So….怎么能少了我们呢？？ </p>
+</blockquote>
+<p>1.创建github账号<br>2.Create a new repository<br>3.Repository name填写:leaderzhang.github.io （自行替换leaderzhang字符串）<br>4.记得勾选一下Initialize this repository with a README</p>
+<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><blockquote>
+<p>因为我本地是Windows环境，所以安装的Node.js是Node for windows，centos、ubuntu等系统安装Node.js的话很快，一条命令就ok。so，自行百度解决~</p>
+</blockquote>
+<p>1.先在本地服务器上下载<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>——LTS是稳定版，Current是最新版</p>
+<p>2.打开Git Bash 输入命令，修改npm的registry为淘宝镜像。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry &quot;https://registry.npm.taobao.org&quot;</span><br></pre></td></tr></table></figure></p>
+<p>3.查看npm版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure></p>
+<p>4.进入blog文件夹，输入命令，安装<strong>Hexo</strong></p>
+<p>在blog文件夹右键Git Bash Here，然后输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>5.<strong>安装Hexo博客程序</strong></p>
+<p>在blog文件夹下输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
+<p>安装完后就会出现以下目录结构</p>
+<p>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── _drafts<br>|   └── _posts<br>└── themes</p>
+<blockquote>
+<p><strong>_config.yml</strong><br>网站的 配置 信息，您可以在此配置大部分的参数。<br><strong>package.json</strong><br>应用程序的信息。EJS, Stylus 和 Markdown renderer 已默认安装，您可以自由移除。<br><strong>scaffolds</strong><br>模版文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。<br>Hexo的模板是指在新建的markdown文件中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。<br><strong>source</strong><br>资源文件夹是存放用户资源的地方。除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。<br><strong>themes</strong><br>主题文件夹。Hexo 会根据主题来生成静态页面。</p>
+</blockquote>
+<p>啥都先别管，咱先接着来~</p>
+<p>6.在本地生成git ssh密钥书以及配置Git的账户名和邮箱</p>
+<p>&emsp;在Git Bash中输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;leaderzhang&quot; //设置账户名</span><br><span class="line">git config --global user.email &quot;xxxx@xx.com&quot;  //设置账户邮箱</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;  //生成证书文件</span><br><span class="line">  连续三个回车就行，密码为空</span><br><span class="line">cd ~/.ssh</span><br><span class="line">  有两个文件，id_rsa和id_rsa.pub</span><br><span class="line">cat id_rsa.pub   //复制里面的内容</span><br></pre></td></tr></table></figure></p>
+<p>7.将id_rsa.pub的内容复制到github里<br>&emsp;1)打开github<br>&emsp;2)点击右上角头像,点击settings进入设置<br>&emsp;3)点击SSH and GPG keys<br>&emsp;4)点击New ssh keys<br>&emsp;5)粘贴进去即可</p>
+<p>8.在Git Bash中验证key是否正确<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
+<p>如果没什么错误，会看到hi!Hello,xxxx等字样</p>
+<p>9.修改<strong>_config.yml</strong>文件</p>
+<p>用编辑器打开你的blog项目，修改_config.yml文件的一些配置(冒号之后都是有一个半角空格的)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>10.启动Hexo</p>
+<p>在blog文件夹下，分别执行下列命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo clean   //清除缓存文件</span><br><span class="line">hexo generate  //生成静态文件。简写为 hexo g</span><br><span class="line">hexo server //启动服务器。默认情况下，访问网址为： http://localhost:4000/。</span><br><span class="line">                    选项	描述</span><br><span class="line">                    -p, --port	重设端口</span><br><span class="line">                    -s, --static	只使用静态文件</span><br><span class="line">                    -l, --log	启动日记记录，使用覆盖记录格式</span><br></pre></td></tr></table></figure></p>
+<p>这时候，打开localhost:4000即可看到惊艳的<strong>Hexo</strong>博客了</p>
+<p>11.把博客放到Github上<br>&emsp;&emsp;先安装一波：<br><figure class="highlight plain"><figcaption><span>install hexo-deployer-git --save```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">（这样才能将你写好的文章部署到github服务器上并让别人浏览到）</span><br><span class="line">执行命令(建议每次都按照如下步骤部署)：</span><br><span class="line">在blog文件夹下，输入以下命令：</span><br></pre></td></tr></table></figure></p>
+<p>hexo clean<br>hexo generate<br>hexo deploy //注意deploy的过程中要输入你的username及passward<br><code>`</code></p>
+<p>在浏览器中输入<a href="https://yourgithubname.github.io就可以看到你的个人博客啦，是不是很兴奋！" target="_blank" rel="noopener">https://yourgithubname.github.io就可以看到你的个人博客啦，是不是很兴奋！</a><br>感觉gitbash中东西太多的时候输入clear命令清空</p>
+<hr>
+<p>文章来自1eAder创作，转载请联系本人</p>
+<p>作者 <a href="https://leaderzhang.com/about.html" target="_blank" rel="noopener">@1eAder</a><br>2018 年 10月 11日    </p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2018/10/11/start-hexo/" data-id="cjn5fdb9n0000jknufmwflmfz" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>seguir:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/11/start-hexo/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/10/11/start-hexo/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2018-10-11T15:21:30.000Z" itemprop="datePublished">2018-10-11</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">arxius</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 1eAder</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2018/10/11/start-hexo/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
