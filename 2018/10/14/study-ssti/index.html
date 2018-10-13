@@ -6,21 +6,26 @@
     
 
     
-    <title>归档: 2018/10 | 1eAder</title>
+    <title>服务端模板注入(SSTI)学习笔记 | 1eAder</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="本博客专注于ctf比赛和网络安全攻防技术，热爱网络技术并且也很愿意结交热爱网络技术的你们.我是一个热爱网络技术的少年">
-<meta name="keywords" content="CTF,hacker,seo,一个热爱网络技术的少年,网络攻防,内网渗透技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="1eAder">
-<meta property="og:url" content="https://leaderzhang.github.io/archives/2018/10/index.html">
+        <meta name="keywords" content="SSTI" />
+    
+    <meta name="description" content="#服务端模板注入(SSTI)学习笔记 我在学习laravel的时候，了解到了模板引擎这一说法。一般来说，框架型的网站都会用到模板引擎这个东西，因为这个东西很方便开发者从后端传递给前端一些特定的值，来到达前后端的交互。  So，模板注入这个东西的起因就是因为方便   ##如何造成的注入呢？ 学习Web安全的时候，有一条规则是大家公认的。 一切用户可控的值，都是不安全的 用这次护网杯的一道WEB题来了">
+<meta name="keywords" content="SSTI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="服务端模板注入(SSTI)学习笔记">
+<meta property="og:url" content="https://leaderzhang.github.io/2018/10/14/study-ssti/index.html">
 <meta property="og:site_name" content="1eAder">
-<meta property="og:description" content="本博客专注于ctf比赛和网络安全攻防技术，热爱网络技术并且也很愿意结交热爱网络技术的你们.我是一个热爱网络技术的少年">
+<meta property="og:description" content="#服务端模板注入(SSTI)学习笔记 我在学习laravel的时候，了解到了模板引擎这一说法。一般来说，框架型的网站都会用到模板引擎这个东西，因为这个东西很方便开发者从后端传递给前端一些特定的值，来到达前后端的交互。  So，模板注入这个东西的起因就是因为方便   ##如何造成的注入呢？ 学习Web安全的时候，有一条规则是大家公认的。 一切用户可控的值，都是不安全的 用这次护网杯的一道WEB题来了">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.imgur.com/XHpYuJE.png">
+<meta property="og:updated_time" content="2018-10-13T19:14:56.285Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1eAder">
-<meta name="twitter:description" content="本博客专注于ctf比赛和网络安全攻防技术，热爱网络技术并且也很愿意结交热爱网络技术的你们.我是一个热爱网络技术的少年">
+<meta name="twitter:title" content="服务端模板注入(SSTI)学习笔记">
+<meta name="twitter:description" content="#服务端模板注入(SSTI)学习笔记 我在学习laravel的时候，了解到了模板引擎这一说法。一般来说，框架型的网站都会用到模板引擎这个东西，因为这个东西很方便开发者从后端传递给前端一些特定的值，来到达前后端的交互。  So，模板注入这个东西的起因就是因为方便   ##如何造成的注入呢？ 学习Web安全的时候，有一条规则是大家公认的。 一切用户可控的值，都是不安全的 用这次护网杯的一道WEB题来了">
+<meta name="twitter:image" content="https://i.imgur.com/XHpYuJE.png">
     
 
     
@@ -133,186 +138,182 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>归档: 2018/10
+    <a class="page-title-link" href="/categories/WEB安全/">WEB安全</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="pages-study-ssti" class="article article-single article-type-pages" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/10/14/study-ssti/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://i.imgur.com/XHpYuJE.png)" alt="服务端模板注入(SSTI)学习笔记" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://leaderzhang.github.io/2018/10/14/study-ssti/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/WEB安全/">WEB安全</a>
-            </div>
-            <div class="date"><time datetime="2018-10-13T19:02:55.000Z" itemprop="datePublished">2018-10-14</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/10/14/study-ssti/">服务端模板注入(SSTI)学习笔记</a>
+        服务端模板注入(SSTI)学习笔记
         </h1>
     
 
-        <p class="article-excerpt">
-            #服务端模板注入(SSTI)学习笔记
-我在学习laravel的时候，了解到了模板引擎这一说法。一般来说，框架型的网站都会用到模板引擎这个东西，因为这个东西很方便开发者从后端传递给前端一些特定的值，来到达前后端的交互。
-
-So，模板注入这个东西的起因就是因为方便
-
-
-##如何造成的注入呢？
-学习Web安全的时候，有一条规则是大家公认的。
-一切用户可控的值，都是不安全的
-用这次护网杯的一道WEB题来了
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/10/14/study-ssti/" class="article-date">
+            <time datetime="2018-10-13T19:02:55.000Z" itemprop="datePublished">2018-10-14</time>
+        </a>
     </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/10/12/how-to-bind-domain-with-github/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://leaderzhang.github.io/2018/10/12/how-to-bind-domain-with-github/">0</span>
-    
-</span>
+		
 
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/SSTI/">SSTI</a>
+    </div>
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/建站/">建站</a>
             </div>
-            <div class="date"><time datetime="2018-10-12T07:35:27.000Z" itemprop="datePublished">2018-10-12</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/10/12/how-to-bind-domain-with-github/">怎样将域名绑定到github pages 博客上</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="服务端模板注入-SSTI-学习笔记"><a href="#服务端模板注入-SSTI-学习笔记" class="headerlink" title="#服务端模板注入(SSTI)学习笔记"></a>#服务端模板注入(SSTI)学习笔记</h2><ul>
+<li><p>我在学习laravel的时候，了解到了模板引擎这一说法。一般来说，框架型的网站都会用到模板引擎这个东西，因为这个东西很方便开发者从后端传递给前端一些特定的值，来到达前后端的交互。</p>
+</li>
+<li><p>So，模板注入这个东西的起因就是因为<strong>方便</strong></p>
+</li>
+</ul>
+<p>##如何造成的注入呢？</p>
+<p>学习Web安全的时候，有一条规则是大家公认的。</p>
+<p><strong>一切用户可控的值，都是不安全的</strong></p>
+<p>用这次护网杯的一道WEB题来了解SSTI</p>
+<blockquote>
+<p><strong>easy tornado</strong></p>
+</blockquote>
+<p>打开网站后，是这样的：<br><br><br><img src="https://i.imgur.com/XHpYuJE.png" alt="easy tornado"><br><br><br>依次打开链接后得到的信息：</p>
+<hr>
+<p>/file?filename=Orz.txt&amp;signature=0434ba1fadd43ce31661c315fbb8a9c6</p>
+<p>Orz.txt<br>render()</p>
+<hr>
+<p>/file?filename=hint.txt&amp;signature=78423a4ae34f2a6e9088a35ef650af22</p>
+<p>hint.txt<br>md5(cookie_secret + md5(filename))</p>
+<hr>
+<p>/file?filename=flag.txt&amp;signature=dbc862f7ca4cd3dd4ba82c6e7ff6d6af</p>
+<p>flag.txt<br>/fllllllllllag</p>
+<hr>
+<p>第一个Orz.txt提示render()</p>
+<p><strong>render()</strong>是一般python Web应用框架中渲染模板的函数<br>所以应该往SSTI方面想</p>
+<p>第二个hint.txt提示了一段加密算法<br>对题目基础测试的时候，会发现这一段加密算法应该就是signature的算法。</p>
+<p>第三个flag.txt提示了flag所在的文件</p>
+<p>我们随意读取一个文件时，他会报错，网页提示是签名错误<br><img src="https://i.imgur.com/qKRAWAV.png" alt="easy tornado提示签名错误"></p>
+<p>我们看到有一个msg的参数，对它Fuzz一波，可以发现，传的值会返回在页面上</p>
+<p><img src="https://i.imgur.com/awludzl.png" alt="fuzz参数"><br>所以想到第一个提示的render()的作用就应该在这里体现出来。</p>
+<p>由于是tornado框架，没怎么接触过，所以我们得去官网找一找关于模板引擎的<a href="https://tornado.readthedocs.io/en/latest/guide/templates.html#" target="_blank" rel="noopener">文档</a></p>
+<p>可以了解到，服务端在render()函数中传递参数的值的用法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.render(&apos;index.html&apos;, contents=CONTENTS_LIST)</span><br></pre></td></tr></table></figure></p>
+<p>在html模板文件中接收值的用法：<img src="https://i.imgur.com/IC0YlrC.png" alt="模板中传递值的用法"></p>
+<p>表示在html中取服务端的CONTENTS_LIST的内容。</p>
+<p>接下来我们要想办法读取hint.txt里面加密算法的值</p>
+<p>filename对应url里面的filename值</p>
+<p>但是cookie_secret这个东西是什么？</p>
+<p>百度一波后知道，是tornado为了cookie的安全设置的一个值</p>
+<p>官方对Cookie_secret这个值的<a href="https://www.tornadoweb.org/en/latest/guide/security.html?highlight=cookie_secret" target="_blank" rel="noopener">解释文档</a></p>
+<p>我们可以看到，当MainHandler传递值时，会创建一个名叫settings的dict，而cookie_secret就在里面。并且，settings会随着MainHandler传递到前端去。这样我们就可以构造一个payload：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/error?msg=&#123;&#123;handler.settings&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>我们就可以得到cookie_secret了<br><img src="https://i.imgur.com/NuSw6Nj.png" alt="tornado的cookie_secret"></p>
+<p>然后把它用hint.txt里面的加密算法带入进去计算一下。</p>
+<blockquote>
+<p>提示：由于cookie_secret里面有特殊字符，需要将特殊字符原封不动得带入</p>
+</blockquote>
+<p>python脚本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import hashlib</span><br><span class="line"></span><br><span class="line">cookie_secret=r&apos;WhzKS&#123;Z.*~k)L@XEt3UT%GB04(NAV[l1ojuD!-?]2Hg&lt;rx&#125;QmnCOpJ9+c8&gt;&amp;qI6s&apos;</span><br><span class="line"></span><br><span class="line">def md5(code):</span><br><span class="line">	temp = hashlib.md5(str(code)).hexdigest()</span><br><span class="line">	return temp</span><br><span class="line">filename = &apos;/fllllllllllag&apos;</span><br><span class="line">res = md5(cookie_secret + md5(filename))</span><br><span class="line">print res</span><br></pre></td></tr></table></figure>
+<p>其实这项漏洞很早就被发现，但为什么不能被广大利用呢？<br>因为这在真实的生产环境很少用到，在现在的网站中，已经很少有直接将用户的值直接显示在页面上的。一般都会将值实体化编码后再输入。</p>
+<p>推荐学习的链接：</p>
+<p><a href="https://wizardforcel.gitbooks.io/web-hacking-101/content/16.html" title="web-hacking-101中文版第十六章模板注入" target="_blank" rel="noopener">web-hacking-101中文版第十六章模板注入</a></p>
+<p><a href="https://portswigger.net/blog/server-side-template-injection" title="Burpsuite关于SSTI的用法和讲解" target="_blank" rel="noopener">Burpsuite关于SSTI的用法和讲解</a></p>
+<p><a href="http://www.4hou.com/technology/12675.html" title="服务器端模板注入(SSTI)" target="_blank" rel="noopener">服务器端模板注入(SSTI)</a></p>
+<p><a href="http://www.freebuf.com/articles/web/135953.html" title="服务端注入之Flask框架中服务端模板注入问题" target="_blank" rel="noopener">服务端注入之Flask框架中服务端模板注入问题</a></p>
+<p><a href="http://www.freebuf.com/articles/web/136118.html" title="Flask Jinja2开发中遇到的的服务端注入问题研究" target="_blank" rel="noopener">Flask Jinja2开发中遇到的的服务端注入问题研究</a></p>
+<p><a href="https://www.cnblogs.com/wfzWebSecuity/p/9415641.html" title="python 模板注入" target="_blank" rel="noopener">python 模板注入</a></p>
 
-        <p class="article-excerpt">
-            1、添加CNAME文件
-在仓库根目录下添加一个CNAM文件，没有后缀名，里面内容为你的域名(如:test.com),不需要添加http/www等前缀。
-ping yougithubname.github.io记录下IP地址
-2、添加 DNS  Service记录
-去DNSPod注册个账号，添加域名，设置两个A记录。分别是@和w w w，ip地址填上个步骤获取的IP地址。
-3、设置域名的DNS
-在相
-        </p>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://leaderzhang.github.io/2018/10/14/study-ssti/" data-id="cjn7tjfen0006xwnu2v9jimk9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
-        </div>
-    
 
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/10/12/start-hexo/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://leaderzhang.github.io/2018/10/12/start-hexo/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/建站/">建站</a>
-            </div>
-            <div class="date"><time datetime="2018-10-12T06:19:54.000Z" itemprop="datePublished">2018-10-12</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/10/12/start-hexo/">Hexo+Github搭建博客</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Hexo博客搭建(Hexo+Github)
-&emsp;&emsp;之前我的博客采用的是Emlog+Niginx+Php+Mysql方式搭建的，这样效果感觉不是很好，所以想尝试大佬们都在用的Hexo博客。不得不说，这个Hexo博客的模式，我很早之前也这么想过，因为真的很安全，不存在什么漏洞行为了，前后端彻底分离了。
-&emsp;&emsp;Hexo博客 是比较方便写作的博客了，不像其他博客程序，可
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
-    
-        </div>
-    
 
-
-    </div></section>
+    
+    </section>
 
 
 
@@ -374,6 +375,19 @@ ping yougithubname.github.io记录下IP地址
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/10/12/how-to-bind-domain-with-github/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">怎样将域名绑定到github pages 博客上</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -542,11 +556,13 @@ ping yougithubname.github.io记录下IP地址
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://leaderzhang.github.io/2018/10/14/study-ssti/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
