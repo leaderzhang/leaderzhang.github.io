@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="sqli-labs" />
     
-    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为：&apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1```1234猜测后台语句结构为：```select * from users where id = (&amp;apos;$id&amp;apos;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)%23">
+    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)%23看是否">
 <meta name="keywords" content="sqli-labs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sqli-labs-less-3通关笔记">
 <meta property="og:url" content="https://leaderzhang.github.io/2018/10/19/sqli-labs-less3/index.html">
 <meta property="og:site_name" content="1eAder">
-<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为：&apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1```1234猜测后台语句结构为：```select * from users where id = (&amp;apos;$id&amp;apos;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)%23">
+<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)%23看是否">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.imgur.com/Xqx5MMW.png">
-<meta property="og:updated_time" content="2018-10-19T06:56:59.902Z">
+<meta property="og:updated_time" content="2018-10-19T07:04:53.276Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sqli-labs-less-3通关笔记">
-<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为：&apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1```1234猜测后台语句结构为：```select * from users where id = (&amp;apos;$id&amp;apos;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)%23">
+<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)%23看是否">
 <meta name="twitter:image" content="https://i.imgur.com/Xqx5MMW.png">
     
 
@@ -181,7 +181,11 @@
         <div class="article-entry" itemprop="articleBody">
             <h1 id="Sql注入学习笔记——基于Sqli-labs平台-Less-3"><a href="#Sql注入学习笔记——基于Sqli-labs平台-Less-3" class="headerlink" title="Sql注入学习笔记——基于Sqli-labs平台(Less-3)"></a>Sql注入学习笔记——基于Sqli-labs平台(Less-3)</h1><p>废话不多说，继续干</p>
 <p><strong>单引号测试</strong><br><img src="https://i.imgur.com/Xqx5MMW.png" alt="单引号测试"></p>
-<p>发现报错，内容为：<br><figure class="highlight plain"><figcaption><span>''1'') LIMIT 0,1' at line 1```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">猜测后台语句结构为：</span><br><span class="line"></span><br><span class="line">```select * from users where id = (&apos;$id&apos;) limit 0,1</span><br></pre></td></tr></table></figure></p>
+<p>发现报错，内容为：</p>
+<pre>near ''1'') LIMIT 0,1' at line 1</pre>
+
+<p>猜测后台语句结构为：</p>
+<p><code>select * from users where id = (&#39;$id&#39;) limit 0,1</code></p>
 <p>进一步验证是否为此类结构<br>测试<code>index.php?id=1&#39;)%23</code>看是否报错</p>
 <p><img src="https://i.imgur.com/e74dEcW.png" alt="index.php?&#39;)--+测试"></p>
 <p>OK！页面正常，证明猜测的语句没有问题</p>
@@ -196,7 +200,7 @@
 
 
 
-    <a data-url="https://leaderzhang.github.io/2018/10/19/sqli-labs-less3/" data-id="cjnfnwi4c000ha8nunsi49hbm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://leaderzhang.github.io/2018/10/19/sqli-labs-less3/" data-id="cjnfo3zzx000ulsnuxkc9gfz9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

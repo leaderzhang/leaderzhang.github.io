@@ -194,8 +194,12 @@
         <p class="article-excerpt">
             Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干
 单引号测试
-发现报错，内容为：''1'') LIMIT 0,1' at line 1```1234猜测后台语句结构为：```select * from users where id = (&apos;$id&apos;) limit 0,1
-进一步验证是否为此类结构测试index.php?id=1&#39;)%23
+发现报错，内容为：
+near ''1'') LIMIT 0,1' at line 1
+
+猜测后台语句结构为：
+select * from users where id = (&#39;$id&#39;) limit 0,1
+进一步验证是否为此类结构测试index.php?id=1&#39;)%23看是否
         </p>
     </div>
 </article>
