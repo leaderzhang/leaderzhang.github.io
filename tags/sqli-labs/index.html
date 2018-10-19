@@ -195,8 +195,9 @@
             Sql注入学习笔记——基于Sqli-labs平台(Less-4)第四关开始
 老规矩，单引号测试下
 哟呵，小娘子，没报错。那么咱们就测试下双引号
-发现报错了，报错内容：'"1"") LIMIT 0,1' at line 1 ```1234ok，猜测后台查询语句格式如下：```select * from users where id = (&quot;$id&quot;) limit 0,1
-输入in
+发现报错了，报错内容：near &#39;&quot;1&quot;&quot;) LIMIT 0,1&#39; at line 1
+ok，猜测后台查询语句格式如下：
+select * from users where id = (&quot;$id&qu
         </p>
     </div>
 </article>

@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="sqli-labs" />
     
-    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-4)第四关开始 老规矩，单引号测试下 哟呵，小娘子，没报错。那么咱们就测试下双引号 发现报错了，报错内容：&apos;&quot;1&quot;&quot;) LIMIT 0,1&apos; at line 1 ```1234ok，猜测后台查询语句格式如下：```select * from users where id = (&amp;quot;$id&amp;quot;) limit 0,1 输入in">
+    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-4)第四关开始 老规矩，单引号测试下 哟呵，小娘子，没报错。那么咱们就测试下双引号 发现报错了，报错内容：near &amp;#39;&amp;quot;1&amp;quot;&amp;quot;) LIMIT 0,1&amp;#39; at line 1 ok，猜测后台查询语句格式如下： select * from users where id = (&amp;quot;$id&amp;qu">
 <meta name="keywords" content="sqli-labs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sqli-labs-less-4通关笔记">
 <meta property="og:url" content="https://leaderzhang.github.io/2018/10/19/sqli-labs-less4/index.html">
 <meta property="og:site_name" content="1eAder">
-<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-4)第四关开始 老规矩，单引号测试下 哟呵，小娘子，没报错。那么咱们就测试下双引号 发现报错了，报错内容：&apos;&quot;1&quot;&quot;) LIMIT 0,1&apos; at line 1 ```1234ok，猜测后台查询语句格式如下：```select * from users where id = (&amp;quot;$id&amp;quot;) limit 0,1 输入in">
+<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-4)第四关开始 老规矩，单引号测试下 哟呵，小娘子，没报错。那么咱们就测试下双引号 发现报错了，报错内容：near &amp;#39;&amp;quot;1&amp;quot;&amp;quot;) LIMIT 0,1&amp;#39; at line 1 ok，猜测后台查询语句格式如下： select * from users where id = (&amp;quot;$id&amp;qu">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.imgur.com/F0ZQkyT.png">
-<meta property="og:updated_time" content="2018-10-19T08:50:09.061Z">
+<meta property="og:updated_time" content="2018-10-19T08:54:19.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sqli-labs-less-4通关笔记">
-<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-4)第四关开始 老规矩，单引号测试下 哟呵，小娘子，没报错。那么咱们就测试下双引号 发现报错了，报错内容：&apos;&quot;1&quot;&quot;) LIMIT 0,1&apos; at line 1 ```1234ok，猜测后台查询语句格式如下：```select * from users where id = (&amp;quot;$id&amp;quot;) limit 0,1 输入in">
+<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-4)第四关开始 老规矩，单引号测试下 哟呵，小娘子，没报错。那么咱们就测试下双引号 发现报错了，报错内容：near &amp;#39;&amp;quot;1&amp;quot;&amp;quot;) LIMIT 0,1&amp;#39; at line 1 ok，猜测后台查询语句格式如下： select * from users where id = (&amp;quot;$id&amp;qu">
 <meta name="twitter:image" content="https://i.imgur.com/F0ZQkyT.png">
     
 
@@ -182,7 +182,9 @@
             <h1 id="Sql注入学习笔记——基于Sqli-labs平台-Less-4"><a href="#Sql注入学习笔记——基于Sqli-labs平台-Less-4" class="headerlink" title="Sql注入学习笔记——基于Sqli-labs平台(Less-4)"></a>Sql注入学习笔记——基于Sqli-labs平台(Less-4)</h1><p>第四关开始</p>
 <p>老规矩，单引号测试下<br><img src="https://i.imgur.com/F0ZQkyT.png" alt="单引号测试"></p>
 <p>哟呵，小娘子，没报错。那么咱们就测试下双引号<br><img src="https://i.imgur.com/1hqfZAM.png" alt="双引号测试"></p>
-<p>发现报错了，报错内容：<br><figure class="highlight plain"><figcaption><span>'"1"") LIMIT 0,1' at line 1 ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ok，猜测后台查询语句格式如下：</span><br><span class="line"></span><br><span class="line">```select * from users where id = (&quot;$id&quot;) limit 0,1</span><br></pre></td></tr></table></figure></p>
+<p>发现报错了，报错内容：<br><code>near &#39;&quot;1&quot;&quot;) LIMIT 0,1&#39; at line 1</code></p>
+<p>ok，猜测后台查询语句格式如下：</p>
+<p><code>select * from users where id = (&quot;$id&quot;) limit 0,1</code></p>
 <p>输入<br><code>index.php?id=1&quot;)--+</code>测试<br><img src="https://i.imgur.com/v1xmdkF.png" alt="index.php?id=1&quot;)测试"></p>
 <p>页面正常了，证明语句闭合成功，接下来就是老套路了。</p>
 <p>order by 查询字段数量<br><code>index.php?id=1&quot;) order by 1--+</code><br>.<br>.<br><code>index.php?id=1&quot;) order by 4--+</code><br>测试出为三个字段</p>
@@ -201,7 +203,7 @@
 
 
 
-    <a data-url="https://leaderzhang.github.io/2018/10/19/sqli-labs-less4/" data-id="cjnfrxg6e000dy0nutocebku4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://leaderzhang.github.io/2018/10/19/sqli-labs-less4/" data-id="cjnfs2tof000bw4nudcymtk22" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
