@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="sqli-labs" />
     
-    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)%23看是否">
+    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)--+看是否">
 <meta name="keywords" content="sqli-labs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sqli-labs-less-3通关笔记">
 <meta property="og:url" content="https://leaderzhang.github.io/2018/10/19/sqli-labs-less3/index.html">
 <meta property="og:site_name" content="1eAder">
-<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)%23看是否">
+<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)--+看是否">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.imgur.com/Xqx5MMW.png">
-<meta property="og:updated_time" content="2018-10-19T07:04:53.276Z">
+<meta property="og:updated_time" content="2018-10-19T07:31:56.486Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sqli-labs-less-3通关笔记">
-<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)%23看是否">
+<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)--+看是否">
 <meta name="twitter:image" content="https://i.imgur.com/Xqx5MMW.png">
     
 
@@ -186,7 +186,7 @@
 
 <p>猜测后台语句结构为：</p>
 <p><code>select * from users where id = (&#39;$id&#39;) limit 0,1</code></p>
-<p>进一步验证是否为此类结构<br>测试<code>index.php?id=1&#39;)%23</code>看是否报错</p>
+<p>进一步验证是否为此类结构<br>测试<code>index.php?id=1&#39;)--+</code>看是否报错</p>
 <p><img src="https://i.imgur.com/e74dEcW.png" alt="index.php?&#39;)--+测试"></p>
 <p>OK！页面正常，证明猜测的语句没有问题</p>
 <p>接下来就是老套路了，order by猜测字段数<br>我这里偷懒了，直接测试order by 3和order by 4<br><img src="https://i.imgur.com/cEv2gvT.png" alt="order by 3测试"><br><img src="https://i.imgur.com/XAh8avA.png" alt="order by 4测试"><br>可以证明有三个字段数</p>
@@ -200,7 +200,7 @@
 
 
 
-    <a data-url="https://leaderzhang.github.io/2018/10/19/sqli-labs-less3/" data-id="cjnfobi50000cf4nub02pxldm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://leaderzhang.github.io/2018/10/19/sqli-labs-less3/" data-id="cjnfp48zh000bognujh8k7uq5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
